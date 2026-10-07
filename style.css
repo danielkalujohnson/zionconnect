@@ -53,3 +53,41 @@ h1 {
     color: var(--text-muted);
 }
 
+
+.action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+
+.btn-outline {
+    border: 1px solid var(--blue-light);
+    color: var(--white);
+}
+
+
+.btn:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
+
+
+
+
