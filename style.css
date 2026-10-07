@@ -1,4 +1,4 @@
-: :root {
+ :root {
     --navy: #0b2545;
     --navy-light: #13315c;
     --blue: #1d6fe0;
@@ -54,7 +54,7 @@ h1 {
 }
 
 
-.action {
+.actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -88,6 +88,39 @@ h1 {
   outline-offset: 3px;
 }
 
+.site-footer {
+  padding: 16px 24px;
+  background: var(--navy);
+  color: #8fa6c7;
+  font-size: 0.8rem;
+}
 
 
 
+.site-footer p {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 64px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
