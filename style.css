@@ -28,8 +28,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(var(--navy), var(--navy-light));
-}
+  background:
+    linear-gradient(rgba(11, 37, 69, 0.35), rgba(19, 49, 92, 0.65)),
+    url("images/hero.jpg") center / cover no-repeat;
 
 
 .brand {
