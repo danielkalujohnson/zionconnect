@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mission Prep | Sign Up</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="index.html" class="logo">Zion<span>Connect</span></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Log in</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="form-container">
+
+    <h1>Create Your Account</h1>
+
+    <p>
+      Start preparing for your missionary journey.
+    </p>
+
+    <form id="signupForm">
+
+      <label for="fullName">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        required
+      >
+
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+      >
+
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+      >
+
+  
+<!-- Create Password -->
+<label for="password">Create Password</label>
+<div class="password-wrapper">
+  <input
+    type="password"
+    id="password"
+    name="password"
+    minlength="8"
+    required
+  >
+
+  <button
+    type="button"
+    class="toggle-password"
+    data-target="password"
+    aria-label="Show password"
+    aria-pressed="false"
+  >
+    <svg class="eye-icon" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  </button>
+</div>
+
+<!-- Confirm Password -->
+<label for="confirmPassword">Confirm Password</label>
+<div class="password-wrapper">
+  <input
+    type="password"
+    id="confirmPassword"
+    name="confirmPassword"
+    required
+  >
+
+  <button
+    type="button"
+    class="toggle-password"
+    data-target="confirmPassword"
+    aria-label="Show confirm password"
+    aria-pressed="false"
+  >
+    <svg class="eye-icon" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  </button>
+</div>
+
+
+      <button type="submit">
+        Create Account
+      </button>
+
+    </form>
+
+    <p>
+      Already have an account?
+      <a href="login.html">Log in</a>
+    </p>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <p>Unoffical app. Not affiliated with the church of Jesus Christ of latter-day saint</p>
+</footer>
+
+
+</body>
+</html>
