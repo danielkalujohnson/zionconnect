@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZionConnect | Mission Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="dashboard.html" class="logo">
+      Zion<span>Connect</span>
+    </a>
+
+    <div class="header-actions">
+      <button
+        type="button"
+        class="profile-button"
+        id="profileButton"
+        aria-label="Open profile menu"
+        aria-expanded="false"
+        aria-controls="profileMenu"
+      >
+        <img
+          id="headerProfilePicture"
+          alt="Profile picture"
+          src="images/default-avatar.png"
+        >
+      </button>
+
+      <div class="profile-menu" id="profileMenu" hidden>
+        <a href="profile.html">My Profile</a>
+        <a href="details.html">My Details</a>
+        <button type="button" id="logoutButton">Logout</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+    <!-- Mountain background and welcome -->
+    <section class="mission-hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">YOUR MISSION JOURNEY</p>
+        <h1 id="welcomeHeading">Welcome to ZionConnect!</h1>
+        <p id="welcomeMessage">
+          Prepare spiritually and practically for the journey ahead.
+        </p>
+      </div>
+
+      <blockquote class="scripture-quote">
+        “If ye are prepared ye shall not fear.”
+        <cite>— D&C 38:30</cite>
+      </blockquote>
+    </section>
+
+    <div class="dashboard-container">
+
+      <!-- Three information cards -->
+      <section class="dashboard-grid">
+
+        <article class="info-card welcome-card">
+          <div class="round-icon" aria-hidden="true">●</div>
+          <div>
+            <h2 id="cardWelcomeHeading>Hello, Missionary!</h2>
+            <p>Your preparation journey starts here.</p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <div class="round-icon" aria-hidden="true">▦</div>
+          <div class="card-content">
+            <h2>Your MTC Countdown</h2>
+            <div class="countdown-line">
+              <strong id="countdownNumber">—</strong>
+              <span>days</span>
+            </div>
+            <p id="countdownMessage">Add your MTC date to see your countdown.</p>
+            <div class="mini-divider"></div>
+            <p id="missionSummary">Mission: Not entered yet</p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <div class="round-icon" aria-hidden="true">●</div>
+          <div class="card-content">
+            <h2>Your Mission Information</h2>
+            <p id="missionInfo">Mission: Not entered yet</p>
+            <p id="languageInfo">Language: Not specified</p>
+            <div class="mini-divider"></div>
+            <p class="mission-encouragement">
+              You are called, prepared, and loved.<br>
+              Your mission matters!
+            </p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Shown when no details have been entered -->
+      <section id="missingDetails" class="missing-details" hidden>
+        <h2>Let's personalize your journey</h2>
+        <p>Enter your details to see your mission preparation information.</p>
+        <a href="details.html" class="btn btn-primary">Enter My Details</a>
+      </section>
+
+      <!-- Preparation guidance for those without a call -->
+      <section id="preparationCard" class="info-card preparation-guidance" hidden>
+        <div>
+          <h2>Your Preparation Plan</h2>
+          <p id="preparationMessage"></p>
+        </div>
+      </section>
+
+      <!-- Checklist -->
+      <section class="checklist-card">
+        <div class="checklist-header">
+          <div class="checklist-title">
+            <div class="green-check" aria-hidden="true">✓</div>
+            <div>
+              <h2>My Preparation Checklist</h2>
+              <p>Complete these activities as you prepare for your mission.</p>
+            </div>
+          </div>
+
+          <div class="progress-area">
+            <p id="progressText">0 of 5 tasks completed (0%)</p>
+            <div class="progress-track">
+              <div id="progressBar" class="progress-bar"
+                   role="progressbar"
+                   aria-label="Preparation progress"
+                   aria-valuemin="0"
+                   aria-valuemax="100"
+                   aria-valuenow="0"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-list">
+
+          <label class="task-item">
+            <input type="checkbox" class="preparation-task">
+            <span class="task-description">
+              <strong>Build a daily scripture-study habit</strong>
+              <small>Set aside a regular time to study and reflect.</small>
+            </span>
+            <span class="task-status">Pending</span>
+          </label>
+
+          <label class="task-item">
+            <input type="checkbox" class="preparation-task">
+            <span class="task-description">
+              <strong>Pray and reflect daily</strong>
+              <small>Make time for personal prayer and spiritual growth.</small>
+            </span>
+            <span class="task-status">Pending</span>
+          </label>
+
+          <label class="task-item">
+            <input type="checkbox" class="preparation-task">
+            <span class="task-description">
+              <strong>Learn about missionary life</strong>
+              <small>Speak with appropriate Church leaders about preparing to serve.</small>
+            </span>
+            <span class="task-status">Pending</span>
+          </label>
+
+          <label class="task-item">
+            <input type="checkbox" class="preparation-task">
+            <span class="task-description">
+              <strong>Prepare physically and practically</strong>
+              <small>Develop healthy routines and learn about the things you may need.</small>
+            </span>
+            <span class="task-status">Pending</span>
+          </label>
+
+          <label class="task-item">
+            <input type="checkbox" class="preparation-task">
+            <span class="task-description">
+              <strong>Practice teaching and communication</strong>
+              <small>Practice explaining your beliefs respectfully and clearly.</small>
+            </span>
+            <span class="task-status">Pending</span>
+          </label>
+
+        </div>
+      </section>
+
+      <p class="dashboard-note">
+        ZionConnect is an independent preparation project and is not an
+        official Church of Jesus Christ of Latter-day Saints website.
+        Always follow guidance from your Church leaders.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 ZionConnect. Mission preparation starts here.</p>
+
+    
+<p class="icon-credit">
+  Profile icon by
+  <a
+    href="https://icons8.com/icon/kDoeg22e5jUY/profile"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Icons8</a>
+</p>
+
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | ZionConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="profile-page">
+    <h1>My Profile</h1>
+    <p>Personalize your missionary profile.</p>
+
+    <div class="profile-picture-section">
+      <img
+        id="profilePreview"
+        src="images/default-avatar.png"
+        alt="Your profile picture"
+        width="120"
+        height="120"
+      >
+
+      <h2>Profile Picture</h2>
+      <p>Choose a picture from your device.</p>
+
+      <label for="profilePictureInput">Upload your picture</label>
+      <input
+        type="file"
+        id="profilePictureInput"
+        accept="image/*"
+      >
+
+      <button type="button" id="saveProfilePicture">
+        Save Picture
+      </button>
+
+      <p id="profileMessage" aria-live="polite"></p>
+    </div>
+
+    <a href="dashboard.html">Back to Dashboard</a>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personalize your missionary preparation journey with ZionConnect.">
+  <title>Missionary Details | ZionConnect</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo">Zion<span>Connect</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <h1>Let's Get to Know You</h1>
+    <p>Tell us a little about yourself so we can personalize your preparation journey.</p>
+
+    <form id="detailsForm">
+        
+<label for="missionaryName">Full Name</label>
+<input
+  type="text"
+  id="missionaryName"
+  name="missionaryName"
+  placeholder="Enter your full name"
+  autocomplete="name"
+  required
+>
+
+      <label for="age">Your Age</label>
+      <input type="number" id="age" name="age" min="16" max="100" required>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select an option</option>
+        <option value="elder">Elder</option>
+        <option value="sister">Sister</option>
+      </select>
+
+      <fieldset class="mission-fieldset">
+        <legend>Have you received your mission call?</legend>
+
+        <label class="choice-label">
+          <input type="radio" name="hasCall" value="yes" required>
+          Yes, I have received my call
+        </label>
+
+        <label class="choice-label">
+          <input type="radio" name="hasCall" value="no" required>
+          Not yet
+        </label>
+      </fieldset>
+
+      <section id="missionFields" hidden>
+        <h2>Your Mission Details</h2>
+
+        <label for="missionName">Mission Name</label>
+        <input type="text" id="missionName" name="missionName"
+               placeholder="e.g. Accra Ghana Mission">
+
+        <label for="missionCountry">Assigned Country</label>
+        <input type="text" id="missionCountry" name="missionCountry"
+               placeholder="e.g. Ghana">
+
+        <label for="mtcDate">MTC Arrival Date</label>
+        <input type="date" id="mtcDate" name="mtcDate">
+
+        <label for="language">Assigned Language (if known)</label>
+        <input type="text" id="language" name="language"
+               placeholder="e.g. English">
+      </section>
+
+      <section id="preparationFields" hidden>
+        <h2>Where Are You in the Process?</h2>
+
+        <label for="preparationStage">Choose your current stage</label>
+        <select id="preparationStage" name="preparationStage">
+          <option value="">Select your stage</option>
+          <option value="considering">Considering missionary service</option>
+          <option value="meeting-leaders">Talking with my bishop or branch president</option>
+          <option value="recommendation">Preparing or submitting my recommendation</option>
+          <option value="waiting">Waiting for my mission call</option>
+        </select>
+      </section>
+
+      <button type="submit">Continue to My Dashboard</button>
+      <p id="detailsMessage" class="form-message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>Unofficial app. Not affiliated with The Church of Jesus Christ of Latter-day Saints.</p>
+  </footer>
+</body>
+</html>
